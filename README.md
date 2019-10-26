@@ -50,7 +50,7 @@ var languages = {
   ]
 }
   ```
-You can get the JSON from external file as well. If you do so, make sure you do not change the variable name.
+You can get the JSON from external file. If you do so, keep the variable name and the JSON structure as shown above.
  
 Lastly, call the switchTo function to change the text:
 
