@@ -32,7 +32,7 @@ Supply the source JSON to ```sLang.setSource()``` method. JSON structure is as f
 
 ```javascript
 {
-  "translations": [
+  "dictionary": [
     {
       "lang": "ru",
       "items": {
