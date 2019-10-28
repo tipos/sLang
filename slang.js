@@ -9,8 +9,8 @@ var sLang = (function() {
     switchTo: function(lang) {
       // Query Elements with given selector
       document.querySelectorAll("[" + selector + "]").forEach(function(el) {
-        // Iterate the translations array
-        var pack = languages.translations;
+        // Iterate the dictionary array
+        var pack = languages.dictionary;
         for (var i = 0; i < pack.length; i++) {
           var language = pack[i];
           // Check if passed param exists in translations
@@ -40,7 +40,7 @@ var sLang = (function() {
     },
     // Change selector
     setSelector: function(selector) {
-      selector = selector;
+      selector = "data-" + selector;
     }
   };
 })();
