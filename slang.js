@@ -3,34 +3,7 @@ var sLang = (function() {
   var selector = "data-lang";
 
   // Translations object
-  var languages = {
-    translations: [
-      {
-        lang: "ru",
-        items: {
-          home: "Главная",
-          services: "Услуги",
-          prices: "Тарифы",
-          faq: "Вопросы",
-          costCalculator: "Калькулятор услуг",
-          contacts: "Контакты",
-          login: "Личный Кабинет"
-        }
-      },
-      {
-        lang: "en",
-        items: {
-          home: "Home",
-          services: "Services",
-          prices: "Prices",
-          faq: "FAQ",
-          costCalculator: "Cost Calculator",
-          contacts: "Contacts",
-          login: "Sign In"
-        }
-      }
-    ]
-  };
+  var languages = {};
 
   return {
     switchTo: function(lang) {
@@ -60,6 +33,14 @@ var sLang = (function() {
           }
         }
       });
+    },
+    // Set source JSON
+    setSource: function(src) {
+      languages = src;
+    },
+    // Change selector
+    setSelector: function(selector) {
+      selector = selector;
     }
   };
 })();
