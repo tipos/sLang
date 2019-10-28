@@ -3,24 +3,32 @@ This is a very simple tool that let's you add multiple languages to your website
 
 # Usage:
 Just add the custom data attribute to the element text of which has to be changed. By default, attribute name is "data-lang". But you can change it if you want. Make sure to keep the "data-" prefix. This attribute is used as JSON key to get the required translation.
+If you want to change text of "value" or "placeholder" attribute them you should add prefix "v_" or "p_" respectively to the begining of the keys.
 
 ```html
+<!-- Text -->
 <nav>
   <a href="index.html" data-lang="home">Home</a>
   <a href="about.html" data-lang="services">Services</a>
   <a href="domain.html" data-lang="prices">Prices</a>
   <a href="hosting.html" data-lang="faq">FAQ</a>
   <a href="contact.html" data-lang="contacts">Contact</a>
-  <a href="login.html" data-lang="login"><span>Sign In</span></a>
   <select class="lang-selector" data-lang="lang">
     <option value="en">English</option>
     <option value="ru">Pусский</option>
   </select>
 </nav>
 
+<!-- Placeholder -->
+<input type="email"  placeholder="Your email..." data-lang="p_email" />
+<input type="password"  placeholder="Your password..." data-lang="p_password" />
+
+<!-- Value -->
+<input type="submit" value="Sign in" data-lang="v_submit" />
+
 ```
 
-Import the sLang.js to your project. Then add the keys to the JSON:
+Import the sLang.js to your project. Then add the keys to the JSON. 
 
 ```javascript
 var languages = {
@@ -33,7 +41,9 @@ var languages = {
         "prices": "Тарифы",
         "faq": "Вопросы",
         "contacts": "Контакты",
-        "login": "Личный Кабинет"
+        "p_email": "Ваш Эмаил...",
+        "p_password": "Ваш Пароль...",
+        "v_submit": "Войти"
       }
     },
     {
@@ -44,7 +54,9 @@ var languages = {
         "prices": "Prices",
         "faq": "FAQ",
         "contacts": "Contacts",
-        "login": "Sign In"
+        "p_email": "Your Email...",
+        "p_password": "Your Password...",
+        "v_submit": "Sign in"
       }
     }
   ]
