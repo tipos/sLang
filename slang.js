@@ -45,7 +45,14 @@ var sLang = (function() {
             // Iterate the items object and replace the target's text
             for (var item in language.items) {
               if (item === el.getAttribute(selector)) {
-                el.innerText = language.items[item];
+                // Check what has to be changed, text, value or placeholder
+                if (item.slice(0, 2) === "p_") {
+                  el.placeholder = language.items[item];
+                } else if (item.slice(0, 2) === "v_") {
+                  el.value = language.items[item];
+                } else {
+                  el.innerText = language.items[item];
+                }
               }
             }
             // Break the loop once the required item is found
