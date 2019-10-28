@@ -2,7 +2,7 @@
 This is a very simple tool that let's you add multiple languages to your website. sLang is written in pure JS and has no dependencies.
 
 # Usage:
-Just add the custom data attribute to the element text of which has to be changed. By default, attribute name is "data-lang". But you can change it if you want. Make sure to keep the "data-" prefix. This attribute is used as JSON key to get the required translation.
+Just add the custom data attribute to the element text of which has to be changed. By default, attribute name is "data-lang". But you can change it if you want. Make sure to keep the "data-" prefix. Value of this attribute is used as the keys to get the required translation.
 If you want to change text of "value" or "placeholder" attribute them you should add prefix "v_" or "p_" respectively to the begining of the keys.
 
 ```html
