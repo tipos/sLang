@@ -62,7 +62,7 @@ Supply the source JSON to ```sLang.setSource()``` method. JSON structure is as f
   ]
 }
   ```
-Lastly, call the switchTo function to change the text:
+Lastly, call the ```sLang.switchTo()``` function to change the text of the website:
 
 ```javascript
 document.querySelector('.lang-selector').addEventListener('change', function() {
