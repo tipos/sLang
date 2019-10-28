@@ -28,10 +28,10 @@ If you want to change text of ```value``` or ```placeholder``` attribute then yo
 
 ```
 
-Supply the source JSON to ```sLang.setSource() ``` method. JSON structure is as follows: 
+Supply the source JSON to ```sLang.setSource()``` method. JSON structure is as follows: 
 
 ```javascript
-var languages = {
+{
   "translations": [
     {
       "lang": "ru",
