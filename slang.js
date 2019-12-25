@@ -1,6 +1,6 @@
-var sLang = (function() {
+var slang = (function() {
   // DOM element selector
-  var selector = "data-lang";
+  var selector = 'data-lang';
 
   // Translations object
   var languages = {};
@@ -8,7 +8,7 @@ var sLang = (function() {
   return {
     switchTo: function(lang) {
       // Query Elements with given selector
-      document.querySelectorAll("[" + selector + "]").forEach(function(el) {
+      document.querySelectorAll('[' + selector + ']').forEach(function(el) {
         // Iterate the dictionary array
         var pack = languages.dictionary;
         for (var i = 0; i < pack.length; i++) {
@@ -19,12 +19,16 @@ var sLang = (function() {
             for (var item in language.items) {
               if (item === el.getAttribute(selector)) {
                 // Check what has to be changed, text, value or placeholder
-                if (item.slice(0, 2) === "p_") {
-                  el.placeholder = language.items[item];
-                } else if (item.slice(0, 2) === "v_") {
-                  el.value = language.items[item];
-                } else {
-                  el.innerText = language.items[item];
+                switch (item.slice(0, 2)) {
+                  case 'p_':
+                    el.placeholder = language.items[item];
+                    break;
+                  case '_v':
+                    el.value = language.items[item];
+                    break;
+                  default:
+                    el.innerText = language.items[item];
+                    break;
                 }
               }
             }
@@ -40,7 +44,7 @@ var sLang = (function() {
     },
     // Change selector
     setSelector: function(selector) {
-      selector = "data-" + selector;
+      selector = 'data-' + selector;
     }
   };
 })();
