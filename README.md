@@ -64,8 +64,13 @@ Supply the source JSON to ```sLang.setSource()``` method. JSON structure is as f
   ```
 Lastly, call the ```sLang.switchTo()``` function to change the text of the website:
 
+```html
+<select id="lang-selector">
+  <option value="ru">Русский</option>
+  <option value="en">English</option>
+</select>
+```
+
 ```javascript
-document.querySelector('.lang-selector').addEventListener('change', function() {
-  sLang.switchTo(this.value);
-});
+document.querySelector('#lang-selector').addEventListener('change', e => sLang.switchTo(e.target.value));
 ```
