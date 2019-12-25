@@ -28,7 +28,7 @@ If you want to change text of ```value``` or ```placeholder``` attribute then yo
 
 ```
 
-Supply the source JSON to ```sLang.setSource()``` method. JSON structure is as follows: 
+Supply the source JSON to ```slang.setSource()``` method. JSON structure is as follows: 
 
 ```javascript
 {
@@ -62,7 +62,7 @@ Supply the source JSON to ```sLang.setSource()``` method. JSON structure is as f
   ]
 }
   ```
-Lastly, call the ```sLang.switchTo()``` function to change the text of the website:
+Lastly, call the ```slang.switchTo()``` function to change the text of the website:
 
 ```html
 <select id="lang-selector">
@@ -72,5 +72,5 @@ Lastly, call the ```sLang.switchTo()``` function to change the text of the websi
 ```
 
 ```javascript
-document.querySelector('#lang-selector').addEventListener('change', e => sLang.switchTo(e.target.value));
+document.querySelector('#lang-selector').addEventListener('change', e => slang.switchTo(e.target.value));
 ```
