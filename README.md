@@ -73,5 +73,5 @@ Lastly, call the ```slang.switchTo()``` function to change the text of the websi
 ```
 
 ```javascript
-document.querySelector('#lang-selector').addEventListener('change', e => slang.switchTo(e.target.value));
+document.querySelector('#lang-selector').onchange = (e) => slang.switchTo(e.target.value);
 ```
